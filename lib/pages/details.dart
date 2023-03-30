@@ -39,7 +39,12 @@ class Details extends StatelessWidget {
         ],
         title: Text("Details Screen"),
       ),
-      body: Text("details"),
+      body: Column(
+        children: [
+          Image.asset("assets/img/-smartwatch-casio-smart-.png"),
+          Text("details"),
+        ],
+      ),
     );
   }
 }
