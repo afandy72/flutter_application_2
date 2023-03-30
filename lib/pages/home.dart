@@ -24,8 +24,28 @@ class Home extends StatelessWidget {
                   accountEmail: Text("youssefafandy142@gmail.com")),
               ListTile(
                 title: Text("Home"),
-                leading: Icon(Icons.add_home),
-              )
+                leading: Icon(Icons.home),
+                onTap: () {},
+              ),
+              ListTile(
+                title: Text("My Product"),
+                leading: Icon(Icons.add_shopping_cart),
+                onTap: () {},
+              ),
+              ListTile(
+                title: Text("About"),
+                leading: Icon(Icons.help_center),
+                onTap: () {},
+              ),
+              ListTile(
+                title: Text("Logout"),
+                leading: Icon(Icons.exit_to_app),
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 350,
+              ),
+              Text("developed by Afandy72")
             ],
           ),
         ),
