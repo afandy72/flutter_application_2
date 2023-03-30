@@ -13,9 +13,16 @@ class Login extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(31.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-          ),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            const SizedBox(
+              height: 64,
+            ),
+            MyTextField(
+              ispasss: false,
+              hinttexttt: "Enter Your E-mail: ",
+              TextInputTypeee: TextInputType.emailAddress,
+            ),
+          ]),
         ),
       ),
     );
