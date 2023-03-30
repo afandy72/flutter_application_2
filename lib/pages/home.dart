@@ -11,8 +11,21 @@ class Home extends StatelessWidget {
           child: Column(
             children: [
               UserAccountsDrawerHeader(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(
+                              "assets/img/IMG_20210228_072428_802.jpg"),
+                          fit: BoxFit.cover)),
+                  currentAccountPicture: CircleAvatar(
+                      radius: 44,
+                      backgroundImage:
+                          AssetImage("assets/img/IMG_20210228_072428_802.jpg")),
                   accountName: Text("Afandy72"),
                   accountEmail: Text("youssefafandy142@gmail.com")),
+              ListTile(
+                title: Text("Home"),
+                leading: Icon(Icons.add_home),
+              )
             ],
           ),
         ),
