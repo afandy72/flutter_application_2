@@ -24,7 +24,7 @@ class Register extends StatelessWidget {
                   MyTextField(
                     ispasss: false,
                     hinttexttt: "Enter user name: ",
-                    TextInputTypeee: TextInputType.emailAddress,
+                    TextInputTypeee: TextInputType.text,
                   ),
                   const SizedBox(height: 32),
                   MyTextField(
