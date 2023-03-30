@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Details extends StatelessWidget {
+class Details extends StatefulWidget {
   Details({super.key});
+
+  @override
+  State<Details> createState() => _DetailsState();
+}
+
+class _DetailsState extends State<Details> {
   bool isshow = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -118,14 +125,18 @@ class Details extends StatelessWidget {
               height: 10,
             ),
             Text(
-              "Series 7 is the most durable Apple Watch ever built. Fundamental design changes were needed to achieve the vision of the larger Always-On Retina Alwayson Retina display has nearly 20% more screen area than Series 6",
-              maxLines: 3,
+              "Series 7 is the most durable Apple Watch ever built. Fundamental design changes were needed to achieve the vision of the larger Always-On Retina Alwayson Retina display has nearly 20% more screen area than Series 6 making everything easier to see and use · The most crackresistant front",
+              maxLines: isshow ? 3 : null,
               overflow: TextOverflow.fade,
             ),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    isshow = !isshow;
+                  });
+                },
                 child: Text(
-                  "See More",
+                  isshow ? "See More" : "See less",
                   style: TextStyle(fontSize: 16),
                 ))
           ],
