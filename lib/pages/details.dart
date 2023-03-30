@@ -105,14 +105,19 @@ class Details extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 16,
+            height: 40,
           ),
           SizedBox(
               width: double.infinity,
               child: Text(
                 "Details: ",
                 style: TextStyle(fontSize: 22),
-              ))
+              )),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+              "Series 7 is the most durable Apple Watch ever built. Fundamental design changes were needed to achieve the vision of the larger Always-On Retina")
         ],
       ),
     );
