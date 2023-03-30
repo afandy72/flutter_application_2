@@ -18,6 +18,9 @@ class MyTextField extends StatelessWidget {
         decoration: InputDecoration(
           hintText: hinttexttt,
           // To delete borders
+          enabledBorder: OutlineInputBorder(
+            borderSide: Divider.createBorderSide(context),
+          ),
         ));
   }
 }
