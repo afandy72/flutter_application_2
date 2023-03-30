@@ -27,6 +27,8 @@ class MyTextField extends StatelessWidget {
             ),
           ),
           // fillColor: Colors.red,
+          filled: true,
+          contentPadding: const EdgeInsets.all(8),
         ));
   }
 }
