@@ -51,6 +51,7 @@ class Details extends StatelessWidget {
             height: 16,
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
                 padding: EdgeInsets.all(4),
@@ -59,19 +60,22 @@ class Details extends StatelessWidget {
                   style: TextStyle(fontSize: 16),
                 ),
                 decoration: BoxDecoration(
-                    color: Colors.black,
+                    color: Color.fromARGB(255, 173, 12, 1),
                     borderRadius: BorderRadius.circular(4)),
               ),
               Row(
                 children: [
                   Icon(
                     Icons.star,
+                    color: Colors.yellow,
                   ),
                   Icon(
                     Icons.star,
+                    color: Colors.yellow,
                   ),
                   Icon(
                     Icons.star,
+                    color: Colors.yellow,
                   ),
                   Icon(
                     Icons.star,
@@ -83,13 +87,19 @@ class Details extends StatelessWidget {
               ),
               Row(
                 children: [
+                  SizedBox(
+                    width: 80,
+                  ),
                   Icon(
                     Icons.edit_location,
                   ),
                   SizedBox(
                     width: 3,
                   ),
-                  Text("Whatch Shope")
+                  Text(
+                    "Whatch Shope",
+                    style: TextStyle(fontSize: 16),
+                  )
                 ],
               ),
             ],
