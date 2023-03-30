@@ -22,6 +22,15 @@ class Login extends StatelessWidget {
               hinttexttt: "Enter Your E-mail: ",
               TextInputTypeee: TextInputType.emailAddress,
             ),
+            const SizedBox(height: 32),
+            MyTextField(
+              ispasss: true,
+              hinttexttt: "Enter Your Password: ",
+              TextInputTypeee: TextInputType.number,
+            ),
+            const SizedBox(
+              height: 64,
+            ),
           ]),
         ),
       ),
