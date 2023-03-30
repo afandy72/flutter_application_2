@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/pages/details.dart';
 
 import '../model/item.dart';
 
@@ -19,7 +20,14 @@ class Home extends StatelessWidget {
               itemCount: items.length,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Details(
+                                  product: items[index],
+                                )));
+                  },
                   child: GridTile(
                     child: Stack(children: [
                       Positioned(
@@ -88,7 +96,7 @@ class Home extends StatelessWidget {
           ),
         ),
         appBar: AppBar(
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.black,
           actions: [
             Row(
               children: [
@@ -101,7 +109,7 @@ class Home extends StatelessWidget {
                       ),
                       padding: EdgeInsets.all(5),
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(211, 164, 255, 193),
+                          color: Color.fromARGB(210, 255, 73, 73),
                           shape: BoxShape.circle),
                     ),
                     IconButton(

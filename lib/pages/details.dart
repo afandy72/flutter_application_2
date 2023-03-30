@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Details extends StatefulWidget {
-  Details({super.key});
+import '../model/item.dart';
 
+class Details extends StatefulWidget {
+  Item product;
+  Details({required this.product});
   @override
   State<Details> createState() => _DetailsState();
 }
@@ -14,7 +16,7 @@ class _DetailsState extends State<Details> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.black,
         actions: [
           Row(
             children: [
@@ -27,7 +29,7 @@ class _DetailsState extends State<Details> {
                     ),
                     padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(211, 164, 255, 193),
+                        color: Color.fromARGB(210, 247, 54, 54),
                         shape: BoxShape.circle),
                   ),
                   IconButton(
