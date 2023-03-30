@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/pages/register.dart';
 
 import '../Shared/custom_text_field.dart';
 
@@ -56,7 +57,7 @@ class Login extends StatelessWidget {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const Login()));
+                                  builder: (context) => const Register()));
                           ;
                         },
                         child: Text(
