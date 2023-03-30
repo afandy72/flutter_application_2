@@ -39,6 +39,10 @@ class Home extends StatelessWidget {
                         icon: Icon(Icons.add),
                       ),
                       leading: Text("\$12.33"),
+                      title: Text(
+                        "Seiries 7",
+                        style: TextStyle(color: Color.fromARGB(255, 0, 85, 3)),
+                      ),
                     ),
                   ),
                 );
