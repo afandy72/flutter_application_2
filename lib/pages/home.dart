@@ -7,6 +7,15 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        drawer: Drawer(
+          child: Column(
+            children: [
+              UserAccountsDrawerHeader(
+                  accountName: Text("Afandy72"),
+                  accountEmail: Text("youssefafandy142@gmail.com")),
+            ],
+          ),
+        ),
         appBar: AppBar(
           backgroundColor: Colors.green,
           actions: [
