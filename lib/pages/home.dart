@@ -15,8 +15,8 @@ class Home extends StatelessWidget {
                 mainAxisSpacing: 33),
             itemCount: 4,
             itemBuilder: (BuildContext context, int index) {
-              return Container(
-                color: Colors.amber,
+              return GridTile(
+                child: Image.asset("assets/img/IMG_20210228_072428_802.jpg"),
               );
             }),
         drawer: Drawer(
