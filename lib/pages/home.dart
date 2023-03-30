@@ -7,7 +7,7 @@ class Item {
 }
 
 class Home extends StatelessWidget {
-  List items = [
+  final List<Item> items = [
     Item(imgpath: "Assets/img/-smartwatch-casio-smart-.png", price: 12.22),
     Item(imgpath: "Assets/img/download.jpg", price: 12.22),
     Item(imgpath: "Assets/img/png-transparent-apple-watch-l.png", price: 12.22),
@@ -21,6 +21,8 @@ class Home extends StatelessWidget {
         price: 12.22),
     Item(imgpath: "Assets/img/png-transparent-smartwatch-.png", price: 12.22)
   ];
+
+  Home({super.key});
   @override
   Widget build(BuildContext context) {
     return SafeArea(
