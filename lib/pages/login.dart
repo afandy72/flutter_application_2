@@ -52,7 +52,13 @@ class Login extends StatelessWidget {
                     Text("Don't have an account??",
                         style: TextStyle(fontSize: 17)),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Login()));
+                          ;
+                        },
                         child: Text(
                           "Sign Up",
                           style: TextStyle(
