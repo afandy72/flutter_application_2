@@ -41,8 +41,56 @@ class Details extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Image.asset("assets/img/-smartwatch-casio-smart-.png"),
-          Text("details"),
+          Image.asset(
+              "assets/img/kisspng-apple-watch-series-2-apple-watch-series-3-smartwat-black-smart-watch-5aa3dc83def0f3.3816676915206882599132.png"),
+          SizedBox(
+            height: 16,
+          ),
+          Text("\$12.22"),
+          SizedBox(
+            height: 16,
+          ),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.all(4),
+                child: Text(
+                  "New",
+                  style: TextStyle(fontSize: 16),
+                ),
+                decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(4)),
+              ),
+              Row(
+                children: [
+                  Icon(
+                    Icons.star,
+                  ),
+                  Icon(
+                    Icons.star,
+                  ),
+                  Icon(
+                    Icons.star,
+                  ),
+                  Icon(
+                    Icons.star,
+                  ),
+                  Icon(
+                    Icons.star,
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Icon(
+                    Icons.edit_location,
+                  )
+                  sized
+                ],
+              ),
+            ],
+          )
         ],
       ),
     );
