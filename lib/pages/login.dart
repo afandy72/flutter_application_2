@@ -31,6 +31,15 @@ class Login extends StatelessWidget {
             const SizedBox(
               height: 64,
             ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Sign In", style: TextStyle(fontSize: 19)),
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.blue),
+                  padding: MaterialStateProperty.all(EdgeInsets.all(12)),
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(6)))),
+            ),
           ]),
         ),
       ),
