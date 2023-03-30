@@ -7,8 +7,14 @@ class Item {
 }
 
 final List<Item> items = [
-  Item(imgpath: "assets/img/-smartwatch-casio-smart-.png", price: 12.22),
-  Item(imgpath: "assets/img/download.jpg", price: 23.2),
+  Item(
+      imgpath:
+          "assets/img/kisspng-apple-watch-series-2-apple-watch-series-3-smartwat-black-smart-watch-5aa3dc83def0f3.3816676915206882599132.png",
+      price: 12.22),
+  Item(
+      imgpath:
+          "assets/img/kisspng-apple-watch-smartwatch-vector-realistic-smart-watch-5aad7d5c55e541.6926858215213192603518.png",
+      price: 23.2),
   Item(imgpath: "assets/img/png-transparent-apple-watch-l.png", price: 22.25),
   Item(
       imgpath:
