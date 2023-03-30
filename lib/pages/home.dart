@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+class Item {
+  String imgpath;
+  double price;
+  Item({required this.imgpath, required this.price});
+}
+
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -32,17 +38,13 @@ class Home extends StatelessWidget {
                       ),
                     ]),
                     footer: GridTileBar(
-                      backgroundColor: Color.fromARGB(66, 11, 103, 74),
                       trailing: IconButton(
                         color: Color.fromARGB(255, 62, 94, 70),
                         onPressed: () {},
                         icon: Icon(Icons.add),
                       ),
                       leading: Text("\$12.33"),
-                      title: Text(
-                        "Seiries 7",
-                        style: TextStyle(color: Color.fromARGB(255, 0, 85, 3)),
-                      ),
+                      title: Text(""),
                     ),
                   ),
                 );
