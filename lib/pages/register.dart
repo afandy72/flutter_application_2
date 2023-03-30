@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/pages/login.dart';
 
 import '../Shared/custom_text_field.dart';
 
@@ -59,7 +60,13 @@ class Register extends StatelessWidget {
                       Text("Don't have an account??",
                           style: TextStyle(fontSize: 17)),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Login()));
+                            ;
+                          },
                           child: Text(
                             "Sign in",
                             style: TextStyle(
