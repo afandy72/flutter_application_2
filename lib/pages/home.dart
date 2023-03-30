@@ -11,9 +11,6 @@ class Home extends StatelessWidget {
           child: Column(
             children: [
               UserAccountsDrawerHeader(
-                  currentAccountPicture: (CircleAvatar(
-                      backgroundImage:
-                          AssetImage("Assets/IMG_20210228_072428_802.jpg"))),
                   accountName: Text("Afandy72"),
                   accountEmail: Text("youssefafandy142@gmail.com")),
             ],
