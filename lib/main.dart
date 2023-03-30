@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_const
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/pages/details.dart';
 import 'package:flutter_application_2/pages/home.dart';
 import 'package:flutter_application_2/pages/login.dart';
 import 'package:flutter_application_2/pages/register.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: Home(),
+      home: Details(),
     );
   }
 }
