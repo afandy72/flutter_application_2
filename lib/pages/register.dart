@@ -22,7 +22,7 @@ class Register extends StatelessWidget {
                 ),
                 MyTextField(
                   ispasss: false,
-                  hinttexttt: "Enter Your E-mail: ",
+                  hinttexttt: "Enter user name: ",
                   TextInputTypeee: TextInputType.emailAddress,
                 ),
                 const SizedBox(height: 32),
