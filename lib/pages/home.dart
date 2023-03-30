@@ -8,6 +8,14 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
+        actions: [
+          Row(
+            children: [
+              Text("\$13"),
+              Text("\$13"),
+            ],
+          ),
+        ],
         title: Text("Home"),
       ),
     );
