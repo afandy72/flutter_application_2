@@ -37,7 +37,7 @@ class Details extends StatelessWidget {
             ],
           ),
         ],
-        title: Text("Home"),
+        title: Text("Details Screen"),
       ),
       body: Text("details"),
     );
