@@ -106,7 +106,13 @@ class Details extends StatelessWidget {
           ),
           SizedBox(
             height: 16,
-          )
+          ),
+          SizedBox(
+              width: double.infinity,
+              child: Text(
+                "Details: ",
+                style: TextStyle(fontSize: 22),
+              ))
         ],
       ),
     );
