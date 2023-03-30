@@ -8,18 +8,18 @@ class Item {
 
 class Home extends StatelessWidget {
   final List<Item> items = [
-    Item(imgpath: "Assets/img/-smartwatch-casio-smart-.png", price: 12.22),
-    Item(imgpath: "Assets/img/download.jpg", price: 12.22),
-    Item(imgpath: "Assets/img/png-transparent-apple-watch-l.png", price: 12.22),
+    Item(imgpath: "assets/img/-smartwatch-casio-smart-.png", price: 12.22),
+    Item(imgpath: "assets/img/download.jpg", price: 12.22),
+    Item(imgpath: "assets/img/png-transparent-apple-watch-l.png", price: 12.22),
     Item(
         imgpath:
-            "Assets/img/png-transparent-apple-watch-series-2-apple-watch-series-3-apple-watch-series-1-smart-apple-watch-sports-watch-band-watch-accessory-sport-grey-thumbnail.png",
+            "assets/img/png-transparent-apple-watch-series-2-apple-watch-series-3-apple-watch-series-1-smart-apple-watch-sports-watch-band-watch-accessory-sport-grey-thumbnail.png",
         price: 12.22),
     Item(
         imgpath:
-            "Assets/img/png-transparent-apple-watch-series-2-apple-watch-series-3-smartwatch-black-smart-watch-black-hair-digital-black-white-thumbnail.png",
+            "assets/img/png-transparent-apple-watch-series-2-apple-watch-series-3-smartwatch-black-smart-watch-black-hair-digital-black-white-thumbnail.png",
         price: 12.22),
-    Item(imgpath: "Assets/img/png-transparent-smartwatch-.png", price: 12.22)
+    Item(imgpath: "assets/img/png-transparent-smartwatch-.png", price: 12.22)
   ];
 
   Home({super.key});
@@ -35,7 +35,7 @@ class Home extends StatelessWidget {
                   childAspectRatio: 3 / 2,
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 33),
-              itemCount: 4,
+              itemCount: items.length,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   onTap: () {},
@@ -48,7 +48,7 @@ class Home extends StatelessWidget {
                         bottom: -3,
                         child: ClipRRect(
                             borderRadius: BorderRadius.circular(55),
-                            child: Image.asset("assets/img/download.jpg")),
+                            child: Image.asset(items[index].imgpath)),
                       ),
                     ]),
                     footer: GridTileBar(
