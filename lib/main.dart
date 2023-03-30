@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, unnecessary_const
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/pages/login.dart';
 
@@ -13,6 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark(),
       home: Login(),
     );
   }
