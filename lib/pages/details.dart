@@ -85,8 +85,11 @@ class Details extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.edit_location,
-                  )
-                  sized
+                  ),
+                  SizedBox(
+                    width: 3,
+                  ),
+                  Text("Whatch Shope")
                 ],
               ),
             ],
