@@ -12,6 +12,12 @@ class MyTextField extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return TextField();
+    return TextField(
+        keyboardType: TextInputTypeee,
+        obscureText: ispasss,
+        decoration: InputDecoration(
+          hintText: hinttexttt,
+          // To delete borders
+        ));
   }
 }
