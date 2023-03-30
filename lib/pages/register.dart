@@ -61,7 +61,7 @@ class Register extends StatelessWidget {
                       TextButton(
                           onPressed: () {},
                           child: Text(
-                            "Sign Up",
+                            "Sign in",
                             style: TextStyle(
                                 color: Color.fromARGB(255, 162, 57, 57),
                                 fontSize: 17),
