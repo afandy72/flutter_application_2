@@ -31,6 +31,14 @@ class Home extends StatelessWidget {
                             child: Image.asset("assets/img/download.jpg")),
                       ),
                     ]),
+                    footer: GridTileBar(
+                      trailing: IconButton(
+                        color: Colors.black,
+                        onPressed: () {},
+                        icon: Icon(Icons.add),
+                      ),
+                      leading: Text("\$12.33"),
+                    ),
                   ),
                 );
               }),
