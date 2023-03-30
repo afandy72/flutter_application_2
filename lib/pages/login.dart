@@ -40,6 +40,9 @@ class Login extends StatelessWidget {
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(6)))),
             ),
+            const SizedBox(
+              height: 64,
+            ),
           ]),
         ),
       ),
