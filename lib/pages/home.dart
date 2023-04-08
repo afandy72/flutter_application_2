@@ -131,7 +131,7 @@ class Home extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(right: 16),
                     child: Text(
-                      "\$0",
+                      "\$ ${www.price}",
                       style: TextStyle(fontSize: 20),
                     ),
                   ),
