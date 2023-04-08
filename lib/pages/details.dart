@@ -51,8 +51,7 @@ class _DetailsState extends State<Details> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset(
-                "assets/img/kisspng-apple-watch-series-2-apple-watch-series-3-smartwat-black-smart-watch-5aa3dc83def0f3.3816676915206882599132.png"),
+            Image.asset(widget.product.imgpath),
             SizedBox(
               height: 16,
             ),
