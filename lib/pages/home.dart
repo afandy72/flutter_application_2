@@ -106,10 +106,10 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.black,
           actions: [
-            Row(
-              children: [
-                Consumer<cart>(builder: ((context, www, child) {
-                  return Stack(
+            Consumer<cart>(builder: ((context, www, child) {
+              return Row(
+                children: [
+                  Stack(
                     children: [
                       Container(
                         child: Text(
@@ -127,17 +127,17 @@ class Home extends StatelessWidget {
                           onPressed: () {},
                           icon: Icon(Icons.add_shopping_cart)),
                     ],
-                  );
-                })),
-                Padding(
-                  padding: const EdgeInsets.only(right: 16),
-                  child: Text(
-                    "\$0",
-                    style: TextStyle(fontSize: 20),
                   ),
-                ),
-              ],
-            ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 16),
+                    child: Text(
+                      "\$0",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                ],
+              );
+            })),
           ],
           title: Text("Home"),
         ),
