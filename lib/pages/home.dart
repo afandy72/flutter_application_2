@@ -3,14 +3,8 @@ import 'package:flutter_application_2/pages/details.dart';
 
 import '../model/item.dart';
 
-class Home extends StatefulWidget {
+class Home extends StatelessWidget {
   const Home({super.key});
-
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -52,7 +46,7 @@ class _HomeState extends State<Home> {
                         onPressed: () {},
                         icon: Icon(Icons.add),
                       ),
-                      leading: Text("\$ ${widget.product.imgpath}"),
+                      leading: Text("\$12.33"),
                       title: Text(""),
                     ),
                   ),
@@ -110,7 +104,7 @@ class _HomeState extends State<Home> {
                   children: [
                     Container(
                       child: Text(
-                        "8",
+                        "0",
                         style: TextStyle(fontSize: 15, color: Colors.black),
                       ),
                       padding: EdgeInsets.all(5),
@@ -125,7 +119,7 @@ class _HomeState extends State<Home> {
                 Padding(
                   padding: const EdgeInsets.only(right: 16),
                   child: Text(
-                    "\$13",
+                    "\$0",
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
