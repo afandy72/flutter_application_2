@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../model/item.dart';
+import '../provider/cart.dart';
 
 class Details extends StatefulWidget {
   Item product;
@@ -18,33 +20,37 @@ class _DetailsState extends State<Details> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         actions: [
-          Row(
-            children: [
-              Stack(
-                children: [
-                  Container(
-                    child: Text(
-                      "8",
-                      style: TextStyle(fontSize: 15, color: Colors.black),
+          Consumer<cart>(builder: ((context, www, child) {
+            return Row(
+              children: [
+                Stack(
+                  children: [
+                    Container(
+                      child: Text(
+                        "${www.selected.length}",
+                        style: TextStyle(
+                            fontSize: 17,
+                            color: Color.fromARGB(255, 4, 255, 17)),
+                      ),
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(120, 255, 255, 255),
+                          shape: BoxShape.circle),
                     ),
-                    padding: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(210, 247, 54, 54),
-                        shape: BoxShape.circle),
-                  ),
-                  IconButton(
-                      onPressed: () {}, icon: Icon(Icons.add_shopping_cart)),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 16),
-                child: Text(
-                  "\$13",
-                  style: TextStyle(fontSize: 20),
+                    IconButton(
+                        onPressed: () {}, icon: Icon(Icons.add_shopping_cart)),
+                  ],
                 ),
-              ),
-            ],
-          ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 16),
+                  child: Text(
+                    "\$ ${www.price}",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+              ],
+            );
+          })),
         ],
         title: Text("Details Screen"),
       ),
