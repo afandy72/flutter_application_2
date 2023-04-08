@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/pages/details.dart';
+import 'package:flutter_application_2/provider/cart.dart';
+import 'package:provider/provider.dart';
 
 import '../model/item.dart';
 
@@ -41,10 +43,16 @@ class Home extends StatelessWidget {
                       ),
                     ]),
                     footer: GridTileBar(
-                      trailing: IconButton(
-                        color: Color.fromARGB(255, 62, 94, 70),
-                        onPressed: () {},
-                        icon: Icon(Icons.add),
+                      trailing: Consumer<cart>(
+                        builder: (context, ttt, child) {
+                          return IconButton(
+                            color: Color.fromARGB(255, 62, 94, 70),
+                            onPressed: () {
+                              ttt.add(items[index]);
+                            },
+                            icon: Icon(Icons.add),
+                          );
+                        },
                       ),
                       leading: Text("\$12.33"),
                       title: Text(""),
@@ -100,22 +108,25 @@ class Home extends StatelessWidget {
           actions: [
             Row(
               children: [
-                Stack(
-                  children: [
-                    Container(
-                      child: Text(
-                        "0",
-                        style: TextStyle(fontSize: 15, color: Colors.black),
+                Consumer<cart>(builder: ((context, www, child) {
+                  return Stack(
+                    children: [
+                      Container(
+                        child: Text(
+                          "${www.selected.length}",
+                          style: TextStyle(fontSize: 15, color: Colors.black),
+                        ),
+                        padding: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(210, 255, 73, 73),
+                            shape: BoxShape.circle),
                       ),
-                      padding: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          color: Color.fromARGB(210, 255, 73, 73),
-                          shape: BoxShape.circle),
-                    ),
-                    IconButton(
-                        onPressed: () {}, icon: Icon(Icons.add_shopping_cart)),
-                  ],
-                ),
+                      IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.add_shopping_cart)),
+                    ],
+                  );
+                })),
                 Padding(
                   padding: const EdgeInsets.only(right: 16),
                   child: Text(
