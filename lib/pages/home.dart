@@ -46,7 +46,7 @@ class Home extends StatelessWidget {
                       trailing: Consumer<cart>(
                         builder: (context, ttt, child) {
                           return IconButton(
-                            color: Color.fromARGB(255, 62, 94, 70),
+                            color: Color.fromARGB(255, 4, 255, 17),
                             onPressed: () {
                               ttt.add(items[index]);
                             },
@@ -114,11 +114,13 @@ class Home extends StatelessWidget {
                       Container(
                         child: Text(
                           "${www.selected.length}",
-                          style: TextStyle(fontSize: 15, color: Colors.black),
+                          style: TextStyle(
+                              fontSize: 17,
+                              color: Color.fromARGB(255, 4, 255, 17)),
                         ),
                         padding: EdgeInsets.all(5),
                         decoration: BoxDecoration(
-                            color: Color.fromARGB(210, 255, 73, 73),
+                            color: Color.fromARGB(120, 255, 255, 255),
                             shape: BoxShape.circle),
                       ),
                       IconButton(
