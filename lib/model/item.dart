@@ -27,8 +27,11 @@ final List<Item> items = [
       imgpath:
           "assets/img/kisspng-apple-watch-smartwatch-wearable-technology-apple-products-5ae095327cb341.9870369715246676985108.png",
       price: 10.09),
+  Item(imgpath: "assets/img/pngwing.com.png", price: 6.99),
+  Item(imgpath: "assets/img/pngwing.com (2).png", price: 6.99),
+  Item(imgpath: "assets/img/pngwing.com (1).png", price: 6.99),
   Item(
       imgpath:
-          "assets/img/kisspng-apple-watch-smartwatch-vector-realistic-smart-watch-5aad7d5c55e541.6926858215213192603518.png",
-      price: 6.99)
+          "assets/img/kisspng-apple-watch-series-2-apple-watch-series-3-nike-apple-watch-series-3-5b0d57dcaf2001.5864826915276011167173 (1).png",
+      price: 6.99),
 ];
