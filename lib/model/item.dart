@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 class Item {
   String imgpath;
   double price;
-  Item({required this.imgpath, required this.price});
+  String location;
+  Item(
+      {required this.imgpath,
+      required this.price,
+      this.location = "Main Branch"});
 }
 
 final List<Item> items = [
