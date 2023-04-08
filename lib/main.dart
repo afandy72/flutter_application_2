@@ -5,6 +5,7 @@ import 'package:flutter_application_2/pages/details.dart';
 import 'package:flutter_application_2/pages/home.dart';
 import 'package:flutter_application_2/pages/login.dart';
 import 'package:flutter_application_2/pages/register.dart';
+import 'package:flutter_application_2/provider/cart.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -17,10 +18,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      home: Home(),
+    return ChangeNotifierProvider(
+      create: (context) {
+        return cart();
+      },
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark(),
+        home: Home(),
+      ),
     );
   }
 }
