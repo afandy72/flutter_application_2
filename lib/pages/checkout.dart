@@ -46,7 +46,7 @@ class checkout extends StatelessWidget {
             );
           })),
         ],
-        title: Text("Home"),
+        title: Text("Check Out"),
       ),
     );
   }
