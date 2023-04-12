@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_const
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/pages/checkout.dart';
 import 'package:flutter_application_2/pages/details.dart';
 import 'package:flutter_application_2/pages/home.dart';
 import 'package:flutter_application_2/pages/login.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark(),
-        home: Home(),
+        home: checkout(),
       ),
     );
   }
