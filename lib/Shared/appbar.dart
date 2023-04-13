@@ -1,6 +1,7 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/pages/checkout.dart';
 import 'package:flutter_application_2/provider/cart.dart';
 import 'package:provider/provider.dart';
 
@@ -25,7 +26,12 @@ class Productandprice extends StatelessWidget {
                   color: Color.fromARGB(120, 255, 255, 255),
                   shape: BoxShape.circle),
             ),
-            IconButton(onPressed: () {}, icon: Icon(Icons.add_shopping_cart)),
+            IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => checkout()));
+                },
+                icon: Icon(Icons.add_shopping_cart)),
           ],
         ),
         Padding(
