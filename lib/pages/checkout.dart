@@ -11,6 +11,7 @@ class checkout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ttt = Provider.of<cart>(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
@@ -19,6 +20,22 @@ class checkout extends StatelessWidget {
       ),
       body: SizedBox(
         height: 300,
+        child: ListView.builder(
+            padding: EdgeInsets.all(8),
+            itemCount: ttt.selected.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Card(
+                child: ListTile(
+                  subtitle: Text("TEST"),
+                  leading: CircleAvatar(backgroundImage: AssetImage("path")),
+                  title: Text("ee"),
+                  trailing: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.remove),
+                  ),
+                ),
+              );
+            }),
       ),
     );
   }
