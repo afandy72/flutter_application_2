@@ -52,7 +52,7 @@ class Home extends StatelessWidget {
                         },
                         icon: Icon(Icons.add),
                       ),
-                      leading: Text("\$12.33"),
+                      leading: Text("${items[index].price}"),
                       title: Text(""),
                     ),
                   ),
