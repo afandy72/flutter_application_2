@@ -48,6 +48,10 @@ class checkout extends StatelessWidget {
         ],
         title: Text("Check Out"),
       ),
+      body: SizedBox(
+        height: 300,
+        child: ListView.builder(itemBuilder: itemBuilder),
+      ),
     );
   }
 }
