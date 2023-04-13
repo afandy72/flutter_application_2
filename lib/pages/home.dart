@@ -3,6 +3,7 @@ import 'package:flutter_application_2/pages/details.dart';
 import 'package:flutter_application_2/provider/cart.dart';
 import 'package:provider/provider.dart';
 
+import '../Shared/appbar.dart';
 import '../model/item.dart';
 
 class Home extends StatelessWidget {
@@ -102,37 +103,7 @@ class Home extends StatelessWidget {
         ),
         appBar: AppBar(
           backgroundColor: Colors.black,
-          actions: [
-            Row(
-              children: [
-                Stack(
-                  children: [
-                    Container(
-                      child: Text(
-                        "${ttt.selected.length}",
-                        style: TextStyle(
-                            fontSize: 17,
-                            color: Color.fromARGB(255, 4, 255, 17)),
-                      ),
-                      padding: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          color: Color.fromARGB(120, 255, 255, 255),
-                          shape: BoxShape.circle),
-                    ),
-                    IconButton(
-                        onPressed: () {}, icon: Icon(Icons.add_shopping_cart)),
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 16),
-                  child: Text(
-                    "\$ ${ttt.price}",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ),
-              ],
-            ),
-          ],
+          actions: [Productandprice()],
           title: Text("Home"),
         ),
       ),
