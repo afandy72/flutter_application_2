@@ -9,6 +9,7 @@ class Home extends StatelessWidget {
   const Home({super.key});
   @override
   Widget build(BuildContext context) {
+    final ttt = Provider.of<cart>(context);
     return SafeArea(
       child: Scaffold(
         body: Padding(
@@ -43,16 +44,12 @@ class Home extends StatelessWidget {
                       ),
                     ]),
                     footer: GridTileBar(
-                      trailing: Consumer<cart>(
-                        builder: (context, ttt, child) {
-                          return IconButton(
-                            color: Color.fromARGB(255, 4, 255, 17),
-                            onPressed: () {
-                              ttt.add(items[index]);
-                            },
-                            icon: Icon(Icons.add),
-                          );
+                      trailing: IconButton(
+                        color: Color.fromARGB(255, 4, 255, 17),
+                        onPressed: () {
+                          ttt.add(items[index]);
                         },
+                        icon: Icon(Icons.add),
                       ),
                       leading: Text("\$12.33"),
                       title: Text(""),
@@ -106,38 +103,35 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.black,
           actions: [
-            Consumer<cart>(builder: ((context, www, child) {
-              return Row(
-                children: [
-                  Stack(
-                    children: [
-                      Container(
-                        child: Text(
-                          "${www.selected.length}",
-                          style: TextStyle(
-                              fontSize: 17,
-                              color: Color.fromARGB(255, 4, 255, 17)),
-                        ),
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(120, 255, 255, 255),
-                            shape: BoxShape.circle),
+            Row(
+              children: [
+                Stack(
+                  children: [
+                    Container(
+                      child: Text(
+                        "${ttt.selected.length}",
+                        style: TextStyle(
+                            fontSize: 17,
+                            color: Color.fromARGB(255, 4, 255, 17)),
                       ),
-                      IconButton(
-                          onPressed: () {},
-                          icon: Icon(Icons.add_shopping_cart)),
-                    ],
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 16),
-                    child: Text(
-                      "\$ ${www.price}",
-                      style: TextStyle(fontSize: 20),
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(120, 255, 255, 255),
+                          shape: BoxShape.circle),
                     ),
+                    IconButton(
+                        onPressed: () {}, icon: Icon(Icons.add_shopping_cart)),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 16),
+                  child: Text(
+                    "\$ ${ttt.price}",
+                    style: TextStyle(fontSize: 20),
                   ),
-                ],
-              );
-            })),
+                ),
+              ],
+            ),
           ],
           title: Text("Home"),
         ),
